@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee</title>
+
+    <style>
+      body {
+        min-height: 100vh;
+        width: 100%;
+        background: linear-gradient(#ebcbae, #f9f9f9);
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+
+      h1,
+      h2 {
+        color: #975a5e;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 45px;
+      }
+
+      h2 {
+        font-size: 38px;
+        font-weight: lighter;
+      }
+
+      img {
+        width: 600px;
+        margin: 0 auto;
+        display: block;
+        border-radius: 20px;
+      }
+
+      p {
+        color: #a18061;
+        text-align: center;
+        font-size: 18px;
+        line-height: 1.5;
+        font-weight: bolder;
+        padding: 10px;
+      }
+
+      .coder {
+        color: #4cb1b6;
+        text-align: center;
+      }
+
+      a {
+        color: #4cb1b6;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      button {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        font-size: 22px;
+        text-align: center;
+        display: block;
+        padding: 15px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        background-color: #4cb1b6;
+        color: #f9f9f9;
+        border-radius: 20px;
+        transition: 150ms ease-in-out;
+        border-style: none;
+      }
+
+      button:hover {
+        cursor: pointer;
+
+        background-color: #f9f9f9;
+        color: #4cb1b6;
+        border-style: solid;
+        border-color: #4cb1b6;
+        box-shadow: 7px 7px 5px;
+      }
+
+      span {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: lighter;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Coffee is the best drink in the world!</h1>
+
+    <h2>Here is a little story about it... ☕</h2>
+
+    <img src=
+    https://s3.amazonaws.com/shecodesio-production/uploads/files/000/018/239/original/coffee-around-the-world.jpg?1633331825>
+
+    <p>
+      Coffee is darkly colored, bitter, slightly acidic and has a stimulating
+      effect in humans, primarily due to its caffeine content. <br />
+      It can be prepared and presented in a variety of ways (e.g., espresso,
+      French press, caffè latte, or already-brewed canned coffee). It is usually
+      served hot, although chilled or iced coffee is common. Sugar, sugar
+      substitutes, milk or cream are often used to lessen the bitter taste.
+    </p>
+    <hr />
+
+    <p>
+      Coffee is a brewed drink prepared from roasted coffee beans, the seeds of
+      berries from certain <em>Coffea</em> species. From the coffee fruit, the
+      seeds are separated to produce a stable, raw product: unroasted green
+      coffee. <br />The seeds are then roasted, a process which transforms them
+      into a consumable product: roasted coffee, which is ground into a powder
+      and typically steeped in hot water before being filtered out, producing a
+      cup of coffee.
+      <br />
+
+      <span
+        >Wikipedia says it is one of the most popular beverages in the
+        world.</span
+      >
+      <br />
+
+      <a href="https://en.wikipedia.org/wiki/Coffee" target="_blank"
+        >Learn more here!</a
+      >
+    </p>
+
+    <button>Get some free coffee!</button>
+
+    <div class="coder">
+      Coded by
+      <b
+        ><a
+          href="https://www.linkedin.com/in/aleksandra-andrejevic/"
+          target="_blank"
+          >Aleksandra Andrejevic</a
+        ></b
+      >
+    </div>
+
+    <script>
+      function freeCoffee() {
+        let name = prompt("Hi! What's your name?");
+        let address = prompt("What is your home address?");
+        let favCoffee = prompt("What is your favorite coffee?");
+
+        if (name.length > 0 && address.length > 0 && favCoffee.length > 0) {
+          alert(
+            "Thank you, " +
+              name +
+              "! We will send you " +
+              favCoffee +
+              " to your home at " +
+              address +
+              "!"
+          );
+        } else {
+          alert(
+            "Please provide us with your information so that we can send you some free coffee!"
+          );
+        }
+      }
+
+      let coffeeButton = document.querySelector("button");
+
+      coffeeButton.addEventListener("click", freeCoffee);
+    </script>
+  </body>
+</html>
